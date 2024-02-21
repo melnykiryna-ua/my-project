@@ -13,6 +13,10 @@ def multiply(x, y):
     return x * y
 
 
+def divide(x, y):
+    return x / y
+
+
 def app():
     if len(sys.argv) != 4:
         return "Invalid operation: Please provide three arguments"
@@ -30,8 +34,11 @@ def app():
     elif operation == "multiply":
         result = multiply(num1, num2)
         return f"Result of multiplying {num1} by {num2}: {result}"
+    elif operation == "divide":
+        result = divide(num1, num2)
+        return f"Result of division {num1} by {num2}: {result}"
     else:
-        return "Invalid operation: Please choose 'add', 'subtract', or 'multiply'"
+        return "Invalid operation: Please choose 'add', 'subtract', or 'divide'"
 
 
 result = app()
